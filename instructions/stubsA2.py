@@ -41,7 +41,7 @@ def buildGrossIncomeList(numberOfEmployees):  # Step 1
     return grossIncomeList
 
 
-# operation computes provincial taxes for the input gross income...
+#Function to compute provincial taxes for the input gross income
 def computeProvTaxes(grossIncome):  # Step 2.1.1
 
     ##-----------------------------------------##
@@ -69,7 +69,7 @@ def computeProvTaxes(grossIncome):  # Step 2.1.1
     return round(tax, 2)
 
 
-# operation computes federal taxes for the input gross income
+#Function to compute federal taxes for the input gross income
 def computeFedTaxes(grossIncome):  # Step 2.1.2
 
     ##-----------------------------------------##
@@ -88,7 +88,8 @@ def computeFedTaxes(grossIncome):  # Step 2.1.2
     return round(tax, 2)
 
 
-### Beginning of Step 3 - Computing employee's CPP
+#Function to compute the CPP of employee given gross income.
+Beginning of Step 3 - Computing employee's CPP
 def computeCPP(grossIncome):
     ##-----------------------------------------##
     ## Insert your code here!!!
@@ -97,9 +98,7 @@ def computeCPP(grossIncome):
     if tax > 3499.80:
         tax = 3499.80
     return round(tax, 2)
-
-
-### Beginning of Step 4 - Computing employee's EI
+#function to compute the Employment Insurance of employee given gross income.
 def computeEI(grossIncome):
     ##-----------------------------------------##
     ## Insert your code here!!!
@@ -109,7 +108,7 @@ def computeEI(grossIncome):
         tax = 952.74
     return round(tax, 2)
 
-
+#Function to compute Health Premium
 def computeHealthPremium(grossIncome):
     ##-----------------------------------------##
     ## Insert your code here!!!
@@ -141,7 +140,7 @@ def computeHealthPremium(grossIncome):
     return round(premium_tax, 2)
 
 
-# Function computes net incomes by invoking
+# Function to compute net incomes by invoking gross income list less the total deductions
 def computeNetIncomes(grossIncomeList):  # Step 2
 
     netIncomeList = []  # creating and initializing the net income list
@@ -155,7 +154,7 @@ def computeNetIncomes(grossIncomeList):  # Step 2
     return netIncomeList
 
 
-# Function computes net incomes by invoking
+# Function computes net incomes by invoking deductions
 def computeDeductions(grossIncomeList):  # Step 2
 
     totalDeductionsList = []  # creating and initializing the net income list
@@ -182,7 +181,7 @@ def mean(inputList):  # Step 3
 
     return sum(inputList) / len(inputList)
 
-
+#Function to compute the standard deviation of the input list
 def standardDeviation(inputList):  # Step 4
 
     ##-----------------------------------------##
@@ -193,7 +192,7 @@ def standardDeviation(inputList):  # Step 4
     std_dev = (sum((x - average) ** 2 for x in inputList) / len(inputList)) ** 0.5
     return std_dev
 
-
+#Function to normalize the values in the Input List
 def normalize(inputList):
     ##-----------------------------------------##
     ## Insert your code here!!!
